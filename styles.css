@@ -1,0 +1,139 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Gradients and header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #D0453A, #FF6347);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
+}
+
+/* Menu styling and transition effects */
+.menu-toggle {
+    display: none;
+    background-color: white;
+    color: #D0453A;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* welcome section*/
+.welcome {
+    background: linear-gradient(135deg, #FF6347, #FF7F50);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Us Section */
+.about, .testimonials, .features {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Features with hover effect and gradient */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    background: linear-gradient(135deg, #FF6347, #FF7F50);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(90deg, #D0453A, #FF6347);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
